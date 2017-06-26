@@ -13,6 +13,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -20,13 +22,159 @@
             font-family: 'Lato';
         }
 
+        .section-steps {
+            background-color: #f4f4f4;
+        }
+
+        section{
+            padding: 40px;
+            font-weight: 300;
+            font-size: 20px;
+            text-rendering: optimizeLegibility;
+            color: #555;
+        }
+
         .fa-btn {
             margin-right: 6px;
         }
+
+        .navbar{
+            margin-bottom: 0px;
+        }
+
+        .jumbotron{
+            background-image: linear-gradient(rgba(0,0,0,0.5), #000), url('https://pixabay.com/get/e83db20a2ff1023ed1584d05fb0938c9bd22ffd41db8194293f0c77fa7/books-1835753_1280.jpg');
+            background-size:cover;
+            background-position: center;
+
+            height: 55vh;
+
+            color:white;
+        }
+
+        .icon-big {
+            font-size: 500%;
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 180%;
+            word-spacing: 2px;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        h2:after {
+            display: block;
+            height: 2px;
+            background-color: #76b852;
+            content: " ";
+            width: 100px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-size: 110%;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .long-copy {
+            line-height: 145%;
+            width: 70%;
+            margin-left: 15%;
+        }
+
+        /*-------------Footer-------------*/
+        footer {
+            background-color: #333;
+            padding: 50px;
+            font-size: 16px;
+        }
+
+        .footer-nav {
+            list-style: none;
+            float: left;
+        }
+
+        .social-links {
+            list-style: none;
+            float: right;
+        }
+
+        .footer-nav li,
+        .social-links li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .footer-nav li:last-child,
+        .social-links li:last-child {
+            margin-right: 0;
+        }
+
+        .footer-nav li a:link,
+        .footer-nav li a:visited,
+        .social-links li a:link,
+        .social-links li a:visited {
+            text-decoration: none;
+            border: 0;
+            color: #888;
+            -webkit-transition: color 0.2s;
+            transition: color 0.2s;
+        }
+
+        .footer-nav li a:hover,
+        .footer-nav li a:active {
+            color: #ddd;
+        }
+
+        .social-links li a:link,
+        .social-links li a:visited {
+            font-size: 160%;
+        }
+
+        .ion-social-facebook,
+        .ion-social-twitter,
+        .ion-social-googleplus,
+        .ion-social-instagram {
+            -webkit-transition: color 0.2s;
+            transition: color 0.2s;
+        }
+
+        .ion-social-facebook:hover {
+            color: #3b5998;
+        }
+
+        .ion-social-twitter:hover {
+            color: #00aced;
+        }
+
+        .ion-social-googleplus:hover {
+            color: #dd4b39;
+        }
+
+        .ion-social-instagram:hover {
+            color: #517fa4;
+        }
+
+
+        footer p {
+            color: #888;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+
+
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -48,6 +196,10 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/tutors') }}">Tutor</a></li>
+                    <li><a href="{{ url('/parentsreg') }}">Parents Registration</a></li>
+                    <li><a href="{{ url('/tutorsreg') }}">Tutor Registration</a></li>
+                    <li><a href="{{ url('/blog') }}">Blog</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -55,7 +207,6 @@
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
