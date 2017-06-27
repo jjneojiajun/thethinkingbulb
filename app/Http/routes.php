@@ -24,3 +24,9 @@ Route::get('/parent_registration', function(){
     return view('parent_registration_form/login_details');
 
 });
+
+Route::get('/tutor_registration', function(){
+
+    return view('tutor_registration/tutor_login');
+
+});

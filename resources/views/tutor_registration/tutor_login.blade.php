@@ -7,9 +7,9 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Parent Registration</div>
+                    <div class="panel-heading">Tutor Registration</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/personal_details') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/tutor_details') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -39,6 +39,16 @@
                                     @endif
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <label for="handphone" class="col-md-4 control-label">Handphone</label>
+
+                                <div class="col-md-6">
+                                    <input id="handphone" type="text" class="form-control" name="Handphone" placeholder="9123 4567">
+                                </div>
+
+                            </div>
+
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                 <label for="password" class="col-md-4 control-label">Password</label>

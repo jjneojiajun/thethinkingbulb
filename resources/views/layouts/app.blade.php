@@ -180,7 +180,7 @@
                     <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ url('/tutors') }}">Tutor</a></li>
                     <li><a href="{{ url('/parent_registration') }}">Parents Registration</a></li>
-                    <li><a href="{{ url('/tutorsreg') }}">Tutor Registration</a></li>
+                    <li><a href="{{ url('/tutor_registration') }}">Tutor Registration</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -224,7 +224,7 @@
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ url('/tutors') }}">Tutor</a></li>
                         <li><a href="{{ url('/parent_registration') }}">Parents Registration</a></li>
-                        <li><a href="{{ url('/tutorsreg') }}">Tutor Registration</a></li>
+                        <li><a href="{{ url('/tutor_registration') }}">Tutor Registration</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 footer-col">
@@ -256,7 +256,7 @@
             </div>
             <div class="col-md-6">
                 <ul class="bottom_ul">
-                    <li><a href="#">TheThinkgBulb</a></li>
+                    <li><a href="#">TheThinkingBulb</a></li>
                     <li><a href="#">ABOUT US</a></li>
                     <li><a href="#">BLOG</a></li>
                     <li><a href="#">FAQ</a></li>
