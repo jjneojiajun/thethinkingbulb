@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/parent_registration', function(){
+
+    return view('parent_registration_form/login_details');
+
+});
