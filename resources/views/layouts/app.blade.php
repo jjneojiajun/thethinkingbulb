@@ -43,7 +43,7 @@
         }
 
         .jumbotron{
-            background-image: linear-gradient(rgba(0,0,0,0.5), #000), url('https://pixabay.com/get/e83db20a2ff1023ed1584d05fb0938c9bd22ffd41db8194293f0c77fa7/books-1835753_1280.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.5), #000), url('http://www.mediafire.com/convkey/5dcb/wz6mb4yts7ppn31zg.jpg');
             background-size:cover;
             background-position: center;
 
@@ -224,6 +224,32 @@
     </nav>
 
     @yield('content')
+
+    <footer>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#ViewTutor">View &amp; Request Tutor</a></li>
+                    <li><a href="tutor.html">Tutor Registration</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="social-links">
+                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                Copyright &copy; 2017 by ThinkingBulb. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>

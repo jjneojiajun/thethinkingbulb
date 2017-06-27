@@ -107,32 +107,4 @@
 
     </section>
 
-    <footer>
-        <div class="row">
-            <div class="col-md-6">
-                <ul class="footer-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#ViewTutor">View &amp; Request Tutor</a></li>
-                    <li><a href="tutor.html">Tutor Registration</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul class="social-links">
-                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <p>
-                Copyright &copy; 2017 by ThinkingBulb. All rights reserved.
-            </p>
-        </div>
-    </footer>
-
-
-
 @endsection
