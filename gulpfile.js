@@ -21,14 +21,14 @@ elixir(function(mix) {
             'libs/metisMenu.css',
             'libs/sb-admin-2.css',
             'libs/styles.css'
-        ], './public/css/libs')
+        ], './public/css/libs.css')
 
         .scripts([
             'libs/bootstrap.js',
             'libs/jquery.js',
             'libs/metisMenu.js',
             'libs/sb-admin-2.js',
-            'libs/script.js'
-        ], './public/js/libs')
+            'libs/scripts.js'
+        ], './public/js/libs.js')
 
 });
