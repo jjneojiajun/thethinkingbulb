@@ -19,14 +19,4 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/parent_registration', function(){
-
-    return view('default/parent_registration_form/login_details');
-
-});
-
-Route::get('/tutor_registration', function(){
-
-    return view('default/tutor_registration/tutor_login');
-
-});
+Route::resource('admin/users', 'AdminUsersController');
