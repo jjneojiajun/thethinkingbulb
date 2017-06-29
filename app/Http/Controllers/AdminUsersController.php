@@ -100,7 +100,11 @@ class AdminUsersController extends Controller
     public function edit($id)
     {
         //
-        return view('admin.users.edit');
+        $users = User::findOrFail($id);
+
+        $roles = Role::lists('name', 'id')->all();
+
+        return view('admin.users.edit', compact('users', 'roles'));
 
     }
 
@@ -114,6 +118,42 @@ class AdminUsersController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        $user = User::findOrFail($id);
+
+        if(trim($request->password ) == ''){
+
+            $input = $request->except('password');
+
+        }else{
+
+            $input = $request->all();
+
+            $input['password'] = bcrypt($request->password);
+        }
+
+        $input = $request->all();
+
+        if($file = $request->file('photo_id')){
+
+            $name = time() . $file->getClientOriginalName();
+
+            $destinationPath = public_path() . '/images/';
+
+            $file->move($destinationPath, $name);
+
+            $photo = Photo::create(['file'=>$name]);
+
+            $input['photo_id'] = $photo->id;
+
+        }
+
+        $user->update($input);
+
+        Session::flash('update_user', $user->name . ' has been updated');
+
+        return redirect('/admin/users');
+
     }
 
     /**
@@ -125,5 +165,16 @@ class AdminUsersController extends Controller
     public function destroy($id)
     {
         //
+
+        $user = User::findOrFail($id);
+
+        unlink(public_path() . $user->photo->file);
+
+        $user->delete();
+
+        Session::flash('Deleted_user', 'The User has been deleted');
+
+        return redirect('/admin/users');
+
     }
 }
