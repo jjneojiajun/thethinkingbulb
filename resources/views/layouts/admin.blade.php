@@ -13,7 +13,6 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
-
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
 
 
@@ -130,59 +129,10 @@
                                 <a href="{{route('admin.users.create')}}">Create User</a>
                             </li>
 
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{{route('admin.posts.index')}}">All Posts</a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('admin.posts.create')}}">Create Post</a>
-                            </li>
 
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
-
-
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Categories<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{{route('admin.categories.index')}}">All Categories</a>
-                            </li>
-
-
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Media<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{{route('admin.media.index')}}">All Media</a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('admin.media.create')}}">Create Media</a>
-                            </li>
-
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-
-
-
-
-
 
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -279,16 +229,12 @@
 
 
 
-
-
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
                     <a href="/profile"><i class="fa fa-dashboard fa-fw"></i>Profile</a>
                 </li>
-
-
 
 
                 <li>
@@ -305,9 +251,6 @@
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
-
-
-
 
 
             </ul>
@@ -331,6 +274,7 @@
                 <h1 class="page-header"></h1>
 
                 @yield('content')
+
             </div>
             <!-- /.col-lg-12 -->
         </div>
