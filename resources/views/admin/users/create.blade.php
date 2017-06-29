@@ -6,14 +6,16 @@
 
     <h1>Create Users</h1>
 
-    {!! Form::open(['method'=>'POST', 'action'=>"AdminUsersController@store", 'files'=>true]) !!}
+    {!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true]) !!}
 
-    {{csrf_field()}}
+        {{csrf_field()}}
 
         <div class="form-group">
 
             {!! Form::label('name', 'Name:') !!}
             {!! Form::text('name', null, ['class'=>'form-control']) !!}
+
+        </div>
 
         <div class="form-group">
 
@@ -25,23 +27,24 @@
         <div class="form-group">
 
             {!! Form::label('role_id', 'Role:') !!}
-            {!! Form::select('role_id', ['' => 'Choose Options'] + $roles , null, ['class'=>'form-control']) !!}
+            {!! Form::select('role_id', ['' => 'Choose Options'] + $roles, null, ['class'=>'form-control']) !!}
 
         </div>
 
         <div class="form-group">
 
             {!! Form::label('is_active', 'Status:') !!}
-            {!! Form::select('is_active', array(1 => 'Active', 0 => 'Not Active'), null, ['class'=>'form-control']) !!}
+            {!! Form::select('is_active', array(0 => 'Not Active', 1 => 'Active'), 0, ['class'=>'form-control']) !!}
 
         </div>
 
         <div class="form-group">
 
-            {!! Form::label('file', 'Photo:') !!}
-            {!! Form::file('file', null, ['class'=>'form-control']) !!}
+            {!! Form::label('photo_id', 'File:') !!}
+            {!! Form::file('photo_id', null, ['class'=>'form-control']) !!}
 
         </div>
+
 
         <div class="form-group">
 
@@ -50,9 +53,7 @@
 
         </div>
 
-        </div>
-
-            {!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
 
     {!! Form::close() !!}
 
