@@ -30,3 +30,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('admin/users', 'AdminUsersController');
 
+Route::resource('admin/subjects', 'AdminSubjectsController');
+
+Route::resource('admin/levels', 'AdminLevelsController');
+

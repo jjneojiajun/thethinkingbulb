@@ -27,7 +27,7 @@
 
             <div class="form-group">
 
-                {!! Form::label('title', 'Name:') !!}
+                {!! Form::label('name', 'Name:') !!}
                 {!! Form::text('name', null, ['class'=>'form-control']) !!}
 
             </div>

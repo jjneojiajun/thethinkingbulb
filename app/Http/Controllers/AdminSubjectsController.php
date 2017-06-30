@@ -17,7 +17,7 @@ class AdminSubjectsController extends Controller
 
         $subjects = Subject::all();
 
-        return view('admin.subject.index', compact('subjects'));
+        return view('admin.subjects.index', compact('subjects'));
 
 
     }
@@ -49,10 +49,6 @@ class AdminSubjectsController extends Controller
     {
         //
 
-        $category = Category::findOrFail($id);
-
-        return view('admin.categories.edit', compact('category'));
-
     }
 
     /**
@@ -65,7 +61,9 @@ class AdminSubjectsController extends Controller
     {
         //
 
+        $subjects = Subject::findOrFail($id);
 
+        return view('admin.subjects.edit', compact('subjects'));
 
     }
 
