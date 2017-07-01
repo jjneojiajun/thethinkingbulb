@@ -7,7 +7,7 @@
 
     <div class="col-sm-6">
 
-        {!! Form::model($locations, ['method'=>'PATCH', 'action'=>['AdminLocationsController@update', $levels->id]]) !!}
+        {!! Form::model($locations, ['method'=>'PATCH', 'action'=>['AdminLocationsController@update', $locations->id]]) !!}
 
         <div class="form-group">
 
@@ -24,7 +24,7 @@
 
         <br>
 
-        {!! Form::open(['method'=>'DELETE', 'action'=>['AdminLocationsController@destroy', $location->id]]) !!}
+        {!! Form::open(['method'=>'DELETE', 'action'=>['AdminLocationsController@destroy', $locations->id]]) !!}
 
         {!! Form::submit('Delete Location', ['class'=>'btn btn-danger']) !!}
 

@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Location;
+use App\Religion;
 
 use App\Http\Requests;
 
-class AdminLocationsController extends Controller
+class AdminReligionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +18,9 @@ class AdminLocationsController extends Controller
     {
         //
 
-       $locations = Location::all();
+        $religions = Religion::all();
 
-       return view('admin.locations.index', compact('locations'));
+        return view('admin.religions.index', compact('religions'));
 
     }
 
@@ -35,9 +35,9 @@ class AdminLocationsController extends Controller
     {
         //
 
-        Location::create($request->all());
+        Religion::create($request->all());
 
-        return redirect('/admin/locations');
+        return redirect('/admin/religions');
     }
 
     /**
@@ -50,9 +50,9 @@ class AdminLocationsController extends Controller
     {
         //
 
-        $locations = Location::findOrFail($id);
+        $religions = Religion::findOrFail($id);
 
-        return view('admin.locations.edit', compact('locations'));
+        return view('admin.religions.edit', compact('religions'));
 
     }
 
@@ -67,11 +67,11 @@ class AdminLocationsController extends Controller
     {
         //
 
-        $location = Location::findOrFail($id);
+        $religions = Religion::findOrFail($id);
 
-        $location->update($request->all());
+        $religions->update($request->all());
 
-        return redirect('/admin/locations');
+        return redirect('/admin/religions');
 
     }
 
@@ -85,8 +85,8 @@ class AdminLocationsController extends Controller
     {
         //
 
-        Location::findOrFail($id)->delete();
+        Religion::findOrFail($id)->delete();
 
-        return redirect('/admin/locations');
+        return redirect('/admin/religions');
     }
 }

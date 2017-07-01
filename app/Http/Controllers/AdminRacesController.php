@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Location;
+use App\Race;
 
 use App\Http\Requests;
 
-class AdminLocationsController extends Controller
+class AdminRacesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +18,9 @@ class AdminLocationsController extends Controller
     {
         //
 
-       $locations = Location::all();
+        $races = Race::all();
 
-       return view('admin.locations.index', compact('locations'));
+        return view('admin.races.index', compact('races'));
 
     }
 
@@ -35,9 +35,9 @@ class AdminLocationsController extends Controller
     {
         //
 
-        Location::create($request->all());
+        Race::create($request->all());
 
-        return redirect('/admin/locations');
+        return redirect('/admin/races');
     }
 
     /**
@@ -50,9 +50,9 @@ class AdminLocationsController extends Controller
     {
         //
 
-        $locations = Location::findOrFail($id);
+        $races = Race::findOrFail($id);
 
-        return view('admin.locations.edit', compact('locations'));
+        return view('admin.races.edit', compact('races'));
 
     }
 
@@ -67,11 +67,11 @@ class AdminLocationsController extends Controller
     {
         //
 
-        $location = Location::findOrFail($id);
+        $races = Race::findOrFail($id);
 
-        $location->update($request->all());
+        $races->update($request->all());
 
-        return redirect('/admin/locations');
+        return redirect('/admin/races');
 
     }
 
@@ -85,8 +85,8 @@ class AdminLocationsController extends Controller
     {
         //
 
-        Location::findOrFail($id)->delete();
+        Race::findOrFail($id)->delete();
 
-        return redirect('/admin/locations');
+        return redirect('/admin/races');
     }
 }

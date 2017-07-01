@@ -134,6 +134,33 @@
                     </li>
 
                     <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Elements in Web<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{route('admin.subjects.index')}}">Subjects</a>
+                            </li>
+
+                            <li>
+                                <a href="{{route('admin.levels.index')}}">Levels</a>
+                            </li>
+
+                            <li>
+                                <a href="{{route('admin.races.index')}}">Races</a>
+                            </li>
+
+                            <li>
+                                <a href="{{route('admin.locations.index')}}">Locations</a>
+                            </li>
+
+                            <li>
+                                <a href="{{route('admin.religions.index')}}">Religions</a>
+                            </li>
+
+                        </ul>
+                        <!-- /.nav-seclevelsevel -->
+                    </li>
+
+                    <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
@@ -171,51 +198,6 @@
                             </li>
                             <li>
                                 <a href="grid.html">Grid</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-seclevelsevel -->
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Elements in Web<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{{route('admin.subjects.index')}}">Subjects</a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('admin.levels.index')}}">Levels</a>
-                            </li>
-
-
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-thlevelsevel -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-seclevelsevel -->
-                    </li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="active" href="blank.html">Blank Page</a>
-                            </li>
-                            <li>
-                                <a href="login.html">Login Page</a>
                             </li>
                         </ul>
                         <!-- /.nav-seclevelsevel -->

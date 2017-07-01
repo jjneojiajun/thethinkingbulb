@@ -7,7 +7,7 @@
 
     <div class="col-sm-6">
 
-        {!! Form::model($subjects, ['method'=>'PATCH', 'action'=>['AdminSubjectController@update', $subjects->id]]) !!}
+        {!! Form::model($subjects, ['method'=>'PATCH', 'action'=>['AdminSubjectsController@update', $subjects->id]]) !!}
 
         <div class="form-group">
 

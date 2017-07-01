@@ -4,14 +4,14 @@
 
 @section('content')
 
-    <h1>Level</h1>
+    <h1>Race</h1>
 
     <br>
     <br>
 
     <div class="col-sm-6">
 
-        {!! Form::open(['method'=>'POST', 'action'=>'AdminLevelsController@store']) !!}
+        {!! Form::open(['method'=>'POST', 'action'=>'AdminRacesController@store']) !!}
 
         <div class="form-group">
 
@@ -20,7 +20,7 @@
 
         </div>
 
-        {!! Form::submit('Create Level', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Create Race', ['class'=>'btn btn-primary']) !!}
 
         {!! Form::close() !!}
 
@@ -29,7 +29,7 @@
 
     <div class="col-sm-6">
 
-        @if($levels)
+        @if($races)
 
             <table class="table">
                 <thead>
@@ -41,12 +41,12 @@
                 </thead>
                 <tbody>
 
-                @foreach($levels as $level)
+                @foreach($races as $race)
 
                     <tr>
-                        <td>{{  $level->id   }}</td>
-                        <td><a href="{{ route('admin.levels.edit', $level->id)  }}">{{  $level->name  }}</a></td>
-                        <td>{{  $level->created_at ? $level->created_at->diffForHumans() : 'no date'    }}</td>
+                        <td>{{  $race->id   }}</td>
+                        <td><a href="{{ route('admin.races.edit', $race->id)  }}">{{  $race->name  }}</a></td>
+                        <td>{{  $race->created_at ? $race->created_at->diffForHumans() : 'no date'    }}</td>
                     </tr>
 
                 @endforeach

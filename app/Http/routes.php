@@ -34,3 +34,9 @@ Route::resource('admin/subjects', 'AdminSubjectsController');
 
 Route::resource('admin/levels', 'AdminLevelsController');
 
+Route::resource('admin/races', 'AdminRacesController');
+
+Route::resource('admin/locations', 'AdminLocationsController');
+
+Route::resource('admin/religions', 'AdminReligionsController');
+
