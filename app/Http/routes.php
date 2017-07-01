@@ -40,3 +40,5 @@ Route::resource('admin/locations', 'AdminLocationsController');
 
 Route::resource('admin/religions', 'AdminReligionsController');
 
+Route::resource('admin/qualifications', 'AdminQualificationsController');
+

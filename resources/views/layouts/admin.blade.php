@@ -156,6 +156,11 @@
                                 <a href="{{route('admin.religions.index')}}">Religions</a>
                             </li>
 
+                            <li>
+                                <a href="{{route('admin.qualifications.index')}}">Qualifications</a>
+                            </li>
+
+
                         </ul>
                         <!-- /.nav-seclevelsevel -->
                     </li>
