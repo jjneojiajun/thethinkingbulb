@@ -42,3 +42,5 @@ Route::resource('admin/religions', 'AdminReligionsController');
 
 Route::resource('admin/qualifications', 'AdminQualificationsController');
 
+Route::resource('admin/assignments', 'AdminAssignmentController');
+

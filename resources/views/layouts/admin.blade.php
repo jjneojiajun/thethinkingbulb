@@ -134,6 +134,21 @@
                     </li>
 
                     <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i>Assignments<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{route('admin.assignments.index')}}">All Assignments</a>
+                            </li>
+
+                            <li>
+                                <a href="{{route('admin.assignments.create')}}">Create Assignments</a>
+                            </li>
+                        </ul>
+
+                        <!-- /.nav-seclevelsevel -->
+                    </li>
+
+                    <li>
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i>Elements in Web<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
